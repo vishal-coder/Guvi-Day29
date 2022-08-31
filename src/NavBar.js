@@ -15,6 +15,7 @@ export function NavBar() {
   const [pagesExpand, setPagesExpand] = useState(false);
   const [navBarExpand, setNavBarExpand] = useState(true);
   const navigate = useNavigate();
+  // const [isSubListOpen, updateSubListState] = useState(false);
   return (
     <div className={navBarExpand ? "navBarWrapper" : "navBarCollapse"}>
       <div className="adminWrapper">
@@ -126,14 +127,6 @@ export function NavBar() {
               <li className="subListItem" onClick={() => navigate("/register")}>
                 <a href="#" className="subListItemAnchorTag">
                   Register
-                </a>
-              </li>
-              <li
-                className="subListItem"
-                onClick={() => navigate("/forgot_password")}
-              >
-                <a href="#" className="subListItemAnchorTag">
-                  Forgot Password
                 </a>
               </li>
             </ul>

@@ -3,10 +3,16 @@ import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 import ForumIcon from "@mui/icons-material/Forum";
 import React from "react";
-import { Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
+import { Buttons } from "./Buttons";
+import { Cards } from "./Cards";
+import { Dashboard } from "./Dashboard";
+import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { Login } from "./Login";
 import { NavBar } from "./NavBar";
+import { Register } from "./Register";
 
 export var data = [
   {
@@ -46,23 +52,24 @@ export var data = [
 function App() {
   const location = useLocation();
   const path = location.pathname;
-  var newWindowList = ["/login", "/register", "/forgot_password"];
+  var newWindowList = ["/login", "/register"];
   return newWindowList.includes(path) ? (
     <Routes>
-      {/* <Route path="/login" element={<Login />} /> */}
-      {/* <Route path="/register" element={<Register />} /> */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
     </Routes>
   ) : (
     <div className="App">
       <NavBar />
+
       <div className="mainContainer">
         <Header />
         <Routes>
-          {/* <Route path="/buttons" element={<Buttons />} />
+          <Route path="/buttons" element={<Buttons />} />
           <Route path="/cards" element={<Cards />} />
-          <Route path="/" element={<Dashboard />} /> */}
+          <Route path="/" element={<Dashboard />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );
