@@ -1,38 +1,1137 @@
-.App {
+.App{
+  min-height:100vh;
+  max-height:fit-content ;
+  display:flex;
+}
+.navBarWrapper{
+  width:15%;
+  padding : 0 20px;
+}
+
+.navBarCollapse {
+  width: 6%;
+  padding : 0 10px;
+}
+
+.navBarWrapper,
+.navBarCollapse {
+  background-color: #4e73df;
+}
+
+.adminWrapper{
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  padding : 15px 0;
+  gap: 20px;
+}
+
+.smileyIcon,
+.adminWrapper div{
+  color : white !important;
+  font-weight: bold;
+}
+
+.dashBoardWrapper{
+  display : flex;
+  justify-content: flex-start;
+  padding : 10px 0;
+  gap:8px;
+}
+
+.dashBoardIcon,
+.dashBoard{
+  color : white !important;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.horizontalBreak{
+  margin-bottom: 10px;
+  border-color: rgba(255,255,255,.15);
+}
+
+.adminHorizontalBreak {
+  border-color: rgba(255,255,255,.15);
+}
+
+.listHeadingWrapper{
+  font-size: 10px;
+  color: rgba(255,255,255,.4);
+  font-weight: bold;
+}
+
+ul{
+  list-style-type: none;
+  padding : 0 !important;
+}
+
+.navBarWrapper .listItem{
+  display : flex;
+  justify-content: space-between;
+  align-items: center;
+  padding : 10px 0;
+}
+
+.navBarCollapse .listItem{
+  padding : 10px 0;
+}
+
+.navBarWrapper .listItemDescription{
+  display : flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap:8px;
+}
+
+.listItemIcon{
+  color: rgba(255,255,255,.4) !important;
+}
+
+.arrowIcon{
+  color: rgba(255,255,255,.4) !important;
+}
+
+.listItemAnchorTag,
+.subListItemAnchorTag{
+  text-decoration: none;
+}
+
+.listItemAnchorTag,
+.subListItem {
+  cursor: pointer;
+}
+
+.subListWrapper{
+  font-size: 10px;
+  color: #b7b9cc;
+  font-weight: bold;
+}
+
+.subListItemWrapper{
+  font-size: 10px;
+  color: #b7b9cc;
+  font-weight: bold;
+  padding : 10px 0;
+}
+
+.subList{
+  background-color: white !important;
+  padding : 16px !important;
+  border-radius:5px;
+}
+
+.subListItem{
+  padding: 10px 0;
+}
+
+.navBarExpand{
+  display : flex;
+  justify-content: center;
+  padding : 10px 0;
+}
+
+.listItemDescription div{
+  color : rgba(255,255,255,.8);
+}
+
+.mainContainer {
+  /* background-color: #f8f9fc; */
+  background-color: #EBECF0;
+  height: 100%;
+  width: -webkit-fill-available;
+}
+
+
+.body{
+  padding:20px 20px;
+}
+
+.title{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  /* opacity:0.7; */
+}
+
+.title h1 {
+  font-weight: 300;
+  margin: 0;
+}
+
+.earningCards{
+  display : flex;
+  justify-content : space-between;
+}
+
+.earningCards div{
+  width : 90%;
+}
+
+.card {
+  padding : 25px 16px !important;
+}
+
+.cardContentWrapper{
+  display : flex;
+  justify-content : space-between !important;
+  align-items: center;
+  width:100% !important;
+  gap: 8px;
+}
+
+.contentWrapper{
+  width : 85% !important;
+}
+
+.iconWrapper{
+  width : 15% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress span{
+  font-weight: bold !important;
+  font-size: 20px;
+}
+
+progress{
+  width : 75%;
+}
+
+.name {
+  font-weight: 700 !important;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.content{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.navBarCollapse .listItemDescription,
+.navBarCollapse .dashBoardWrapper {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+}
+
+.navBarCollapse ul {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.navBarCollapse .listHeadingWrapper {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navBarCollapse .listItem .arrowIcon,
+.navBarCollapse .sbAdminDiv {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navBarWrapper .listItemDescription div {
+  font-size: 13px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navBarCollapse .listItemDescription div {
+  font-size: 12px;
+}
+
+.listItemAnchorTag:hover .listItemDescription div,
+.listItemDescription.hightlightText div {
+  color: white;
+  font-weight: 500;
+}
+
+.listItemAnchorTag:hover svg,
+.hightlightText svg {
+  color: white !important;
+}
+
+.navBarCollapse ul li {
+  position: relative;
+}
+
+.navBarCollapse .subList{
+  position: absolute;
+  left: calc(100% + 1.5rem);
+  top: 0;
+  width: max-content;
+}
+
+.navBarWrapper .subList,
+.navBarCollapse .subList {
+  box-shadow: 0 0.15rem 1.75rem 0 rgb(58 59 69 / 15%);
+}
+
+.adminWrapper svg {
+  transform: rotate(-20deg);
+}
+
+.bodyWrapper {
   display: flex;
-  flex-direction: column;
+  gap: 20px;
+}
+
+.leftWrapper {
+  display: grid;
+  gap: 20px;
+}
+
+.circleButtonsWrapper,
+.brandButtonsWrapper,
+.rightWrapper {
+  background: white;
+  box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+  border: 1px solid #e3e6f0;
+  border-radius: .35rem;
+}
+
+.circleButtonsWrapper p,
+.brandButtonsWrapper p,
+.rightWrapper p {
+  color: #858796;
+  margin-top: 0 !important;
+}
+
+.rightWrapper {
+  height: max-content;
+}
+
+.circleButtonsHeader,
+.brandButtonsHeader,
+.splitButtonsHeader {
+  color: #4e73df;
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+  font-weight: 700;
+}
+
+.circleButtonsHeader,
+.circleButtonsBody,
+.brandButtonsHeader,
+.brandButtonsBody,
+.splitButtonsHeader,
+.splitButtonsBody {
+  padding: 15px;
+}
+
+.splitButtonsBody {
+  display: grid;
+  gap: 25px;
+}
+
+.googleButton {
+  background-color: #ea4335 !important;
+  width: 100%;
+  text-transform: lowercase !important;
+}
+
+.facebookButton {
+  background-color: #3b5998 !important;
+  width: 100%;
+  text-transform: lowercase !important;
+}
+
+.brandButtonsWrapper .buttonsWrapper {
+  display: grid;
+  gap: 10px;
+}
+
+.buttonCircle {
+  color: #e83e8c;
+}
+
+.iconsContainer {
+  display: grid;
+  gap: 20px;
+}
+
+.facebookIcon,
+.checkIcon {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.smallIconsWrapper .facebookIcon,
+.smallIconsWrapper .checkIcon {
+  width: 28.8px !important;
+  height: 28.8px !important;
+}
+
+.largeIconsWrapper .facebookIcon,
+.largeIconsWrapper .checkIcon {
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.facebookIcon{
+  fill: #4e73df !important;
+}
+
+.checkIcon {
+  fill: #1cc88a !important
+}
+
+.infoIconWrapper,
+.warningIconWrapper,
+.deleteIconWrapper {
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  display: grid;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.smallIconsWrapper .deleteIconWrapper,
+.smallIconsWrapper .infoIconWrapper,
+.smallIconsWrapper .warningIconWrapper {
+  width: 26.8px;
+  height: 26.8px;
+}
+
+.largeIconsWrapper .deleteIconWrapper,
+.largeIconsWrapper .infoIconWrapper,
+.largeIconsWrapper .warningIconWrapper {
+  width: 52px;
+  height: 52px;
+}
+
+.smallIconsWrapper .deleteIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.infoIconWrapper {
+  background-color: #36b9cc;
+  margin-right: 5px;
+  margin-left: 2px;
+}
+
+.warningIconWrapper {
+  background-color: #f6c23e;
+}
+
+.deleteIconWrapper {
+  background-color: #e74a3b;
+  margin-left: 5px;
+}
+
+.iconsWrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.deleteIcon {
+  fill: white !important;
+}
+
+.infoIcon,
+.warningIcon {
+  width: 16px !important;
+  height: 16px !important;
+  fill: white !important
+}
+
+.largeIconsWrapper .infoIcon,
+.largeIconsWrapper .warningIcon {
+  width: 21.6px !important;
+  height: 21.6px !important;
+}
+
+.buttonsWrapper {
+  display: grid;
+  gap: 10px;
+}
+
+.primarySplitButton,
+.successSplitButton,
+.infoSplitButton,
+.secondarySplitButton,
+.warningSplitButton,
+.dangerSplitButton,
+.lightSplitButton {
+  background: #4e73df;
+  display: flex;
+  height: 36px;
+  width: fit-content;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.successSplitButton {
+  background-color: #1cc88a;
+}
+
+.infoSplitButton {
+  background-color: #36b9cc;
+}
+
+.warningSplitButton {
+  background-color: #f6c23e;
+}
+
+.dangerSplitButton {
+  background-color: #e74a3b;
+}
+
+.secondarySplitButton {
+  background-color: #858796;
+}
+
+.lightSplitButton {
+  background-color: #f8f9fc;
+}
+
+.splitIcon {
+  align-items: center;
+  display: grid;
+  height: inherit;
+  width: 40px;
+  background: rgba(0,0,0,.15);
+  justify-content: center;
+}
+
+.splitIcon svg {
+  fill: rgba(255,255,255,.5)!important;
+}
+
+.primaryButtonText,
+.successButtonText,
+.infoButtonText,
+.secondaryButtonText,
+.warningButtonText,
+.lightButtonText,
+.dangerButtonText {
+  color: white;
+  padding: 0 10px;
+}
+
+.lightButtonText {
+  color: #3a3b45;
+}
+
+.smallAndLargeButtons {
+  display: grid;
+  gap: 10px;
+}
+
+.primarySplitButtonSmall {
+  height: 32px;
+}
+
+.primarySplitButtonLarge {
+  height: 48px;
+}
+
+.primarySplitButtonLarge .primaryButtonText {
+  font-size: 22px;
+  padding: 0 15px;
+}
+
+.primarySplitButtonSmall .primaryButtonText {
+  font-size: 12px;
+}
+
+.primarySplitButtonLarge .splitIcon {
+  width: 46px;
+}
+
+.cardsHeader {
+  color: #5a5c69;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.defaultCardHeader,
+.basicCardHeader,
+.dropdownCardHeader,
+.collapseCardHeader {
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+  font-weight: 700;
+  padding: 15px;
+  color: #4e73df;
+}
+
+.defaultCardHeader {
+  color: #858796;
+}
+
+.cardItem {
+  background: white;
+  border: 1px solid #e3e6f0;
+  border-radius: 5px;
+}
+
+.cardItem p {
+  padding: 15px;
+  color: #858796;
+}
+
+.progressBarBlock .label {
+  display : block;
+  font-weight: bold;
+  font-size: 13px;
+  color : #858796;
+  margin: 0 0 5px 0 !important;
+}
+.progressBarBlock .label span{
+  float:right;
+}
+
+.progressBarBlock .progress{
+  margin: 0 0 5px 0 !important;
+  width : 100%;
+  height : 32px;
+  color : red !important;
+  /* background-color: blue !important; */
+}
+
+.progressBarBlock{
+  padding : 20px;
+}
+
+.progressbarHeader {
+  background-color: #f8f9fc;
+  height : 40px;
+  color : #4E73DF;
+  padding : 8px 16px;
+  font-weight: 600;
+  display : flex;
+  align-items: center;
+}
+
+.progressbarWrapper {
+  background-color: white;
+  border-radius : 5px;
+  border : 1px solid #e3e6f0;
+}
+
+.colorCardWrapper {
+  height: 60px;
+  display : flex;
+  flex-direction : column;
+  justify-content: center;
+  padding : 16px;
+  background-color: black;
+  border-radius: 8px;
+}
+
+.colorName {
+  color : white;
+  width : 100%;
+}
+
+.hexCode {
+  color : rgba(255,255,255,.5);
+  width : 100%;
+}
+
+.colorWrapper {
+  width : 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.LightColorCardWrapper .hexCode,
+.LightColorCardWrapper .colorName {
+  color : gray !important;
+}
+
+.illustrationWrapper{
+  /* display : grid; */
+  background: white;
+  height: max-content;
+}
+
+.illustrationHeader{
+  background-color: #f8f9fc;
+  height : 40px;
+  color : #4E73DF;
+  padding : 8px 16px;
+  font-weight: 600;
+  display : flex;
+  align-items: center;
+}
+
+.loginPage ,
+.forgotPasswordPage {  
+  background-color: #4e73df;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width : 100%;
+}
+
+.loginContainer {
+  display: flex;
+  height: 580px;
+}
+
+.loginFields{
+  display: grid;
+  grid-template-rows: repeat(5, max-content);
+  gap: 12px;
+  padding: 30px;
+  background: white;
+}
+
+.firstWrapper,
+.secondWrapper,
+.thirdWrapper {
+  display: grid;
+  gap: 12px;
+}
+
+
+.thirdWrapper {
+  justify-content: center;
+}
+
+.email, .password {
+  height: 50px;
+  width: 350px;
+}
+
+.email input, .password input {
+  width: calc(100% - 24px);
+  height: calc(100% - 40px);
+  padding: 20px 12px;
+  border-radius: 25px;
+  border: 1px solid #d1d3e2;
+}
+
+.loginButton,
+.googleButton,
+.facebookButton {
+  color: white !important;
+  border-radius: 20px !important;
+  padding: 10px !important;
+  width: 100%;
+}
+
+.loginButton {
+  background-color: #4e73df !important;
+}
+
+.googleButton {
+  background-color: #ea4335;
+}
+
+.facebookButton {
+  background-color: #3b5998;
+}
+
+.divider {
+  width: 100%;
+  border: 1px solid rgba(0,0,0,.1);
+}
+
+.thirdWrapper a {
+  text-decoration: none;
+  color: #4e73df;
+  font-size: 14px;
+}
+
+.forgotPasswordContainer {
+  display: flex;
+  height: 420px;
+  width : 60%;
+}
+
+.forgotPasswordContainer img{
+  width : 400px;
+}
+
+.forgotPasswordFields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  padding: 50px 30px;
+  background: white;
+  width : 40% !important;
+}
+
+.firstWrapper h2 {
+  font-weight: 400;
+  text-align: center;
+}
+
+.firstWrapperfp h2 {
+  font-weight: 400;
+  text-align: center;
+  margin : 0 !important;
+}
+
+
+.fpDescription { 
+  text-align: center;
+}
+
+
+.firstWrapperfp{
+  display: grid;
+  gap: 15px;
+  justify-content: center;
+  width: calc(100% - 60px);
+}
+
+.forgotPasswordButton {
+  color: white !important;
+  border-radius: 20px !important;
+  padding: 10px !important;
+  width: -webkit-fill-available;
+  background-color: #4e73df !important;
+}
+
+.secondWrapperfp {
+  display: grid;
+  gap: 12px;
+  justify-content: center;
+  width: calc(100% - 60px);
+}
+
+.secondWrapperfp a {
+  text-decoration: none;
+  color: #4e73df;
+  font-size: 14px;
+  text-align: center;
+}
+
+.emailfp {
+  height: 50px;
+  width: 100%;
+}
+
+.emailfp input{
+  /* width: calc(100% - 24px);
+  height: calc(100% - 40px); */
+  width: -webkit-fill-available;
+  padding: 20px 12px;
+  border-radius: 25px;
+  border: 1px solid #d1d3e2;
+  height: -webkit-fill-available;
+}
+
+
+
+
+.registerPage {
+  background-color: #4e73df;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.registerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+}
+.registerContainer img {
+  height: 600px;
+}
+
+.registerRightContainer {
+  background: white;
+  height: -webkit-fill-available;
+  padding: 30px;
+  padding: 30px 45px;
+}
+
+.registerButtonsContainer {
+  display: grid;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.registerFirstName,
+.registerLastName,
+.registerPassword,
+.registerRepeatPassword {
+  width: 200px;
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid #d1d3e2;
+}
+
+.registerEmail {
+  width: -webkit-fill-available;
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid #d1d3e2;
+}
+
+.registerDivs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.registerContainer h2 {
+  font-weight: 400;
+  text-align: center;
+}
+
+.registerAccount,
+.registerGoogle,
+.registerFaceBook {
+  color: white !important;
+  padding: 12px !important;
+  border-radius: 20px !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.registerAccount {
+  background-color: #4e73df !important;
+}
+
+.registerGoogle {
+  background-color: #ea4335 !important;
+}
+
+.registerFaceBook {
+  background-color: #3b5998 !important;
+}
+
+.registerLinks {
+  font-size: 13px;
+  display: grid;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.registerLinks a {
+  color: #4e73df;
+}
+
+.illustrationContent {
+  padding: 24px;
+}
+
+.illustrationImage {
+  display: grid;
+  justify-content: center;
+}
+
+.illustrationImage img {
+  width: 320px;
+}
+
+.otherStuff {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.othersLeftContainer {
+  display: grid;
+  gap: 30px;
+}
+
+.othersRightContainer {
+  display: grid;
+  grid-template-rows: max-content max-content;
+  gap: 30px;
+}
+
+.illustrationText {
+  margin: 20px 0;
+}
+
+.illustrationLink a {
+  color: #4e73df;
+  text-decoration: none;
+}
+
+.illustrationLink a:hover {
+  text-decoration: underline;
+  color: #224abe;
+}
+
+.developmentWrapper {
+  background: white;
+}
+
+.developmentHeader {
+  background-color: #f8f9fc;
+  height: 40px;
+  color: #4E73DF;
+  padding: 8px 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.developmentContent {
+  padding: 10px 20px;
+}
+
+
+.header{
+  height : 70px;
+  display : flex;
+  background-color: white;
+  align-items: center;
+
+}
+
+.headerSectionA{
+  width:80%;
+  display : flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.searchEnclosure {
+  display : flex;
+  /* height : 50%; */
+  height: 38px;
+  align-items: center;
+}
+
+.searchEnclosure input{
+  /* height : 82%; */
+  width : 320px;
+  margin-left: 20px;
+
+  height: 100%;
+  padding: 0 8px;
+  border: 0;
+  background-color: #f8f9fc;
+  font-size: 14px;
+}
+
+.search {
+  background-color: #4E73DF;
+  width : 40px;
+  height: 100%;
+  display : flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.search svg {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.search :hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.headerSectionB{
+  width:20%;
+}
+
+.iconWrapper {
+  height : 50%;
+  display : flex;
+  width: fit-content;
+}
+
+
+.BaseBadge-badge {
+  color : white;
+  background-color: #E74A3B;
+  border-radius: 5px !important;
+  font-size: 12px !important;    
+  height: 12px !important;
+  width: fit-content !important;
+  position: relative !important;
+  top: 11px !important;
+  left: -27px;
+}
+
+.headerSectionB{
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  height : 50%;
+  margin-left: 1px solid gray;
+}
+
+.profileName {
+  margin-right: 8px;
+}
+
+.profileImage img{
+  width:32px;
+  height : 32px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.profileImage {
+  border-radius: 50%;
+}
+
+.profileName:hover{
+  cursor: pointer !important;
+}
+
+.profileImage:hover{
+  cursor: pointer;
+}
+
+
+.footer{
+  height : 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+.scrollToTopButton {
+  position : fixed !important;
+  bottom : 10px;
+  right : 10px;
+  width : 40px;
+  height : 40px;
+  padding: 10px 0 0 0 !important;
+  background-color: #ACADB4 !important;
+  color: white !important;
+  font-size: x-large !important;
+}
+
+.buttonsHeader {
+  margin-top: 0;
+  color: #5a5c69;
+  font-weight: 400;
 }
